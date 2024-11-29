@@ -21,7 +21,6 @@ header {
   align-items: center;
   height: 10vh;
   font-family: "Oswald", sans-serif;
-  /* border: solid red; */
 }
 header h2 {
   font-weight: 700;
@@ -29,7 +28,6 @@ header h2 {
 }
 header nav {
   width: 50%;
-  /* border: solid green; */
   height: 10vh;
   display: flex;
   align-items: center;
@@ -40,7 +38,6 @@ header ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  /* border: solid blue; */
 }
 header a {
   text-decoration: none;
@@ -274,6 +271,7 @@ header a:hover {
   font-weight: 500;
   font-size: 1.5rem;
   border: none;
+  font-family: "Oswald";
 }
 
 /* Footer */
