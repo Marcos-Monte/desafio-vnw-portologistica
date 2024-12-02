@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth; /* Rolagem suave de movimentação dentro da pagina */
 }
 
 /* Limitador para resoluções muito altas */
@@ -118,6 +119,7 @@ header a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  /* Hover */
 }
 .containerMais article h3 {
   font-family: "Oswald";
@@ -138,6 +140,10 @@ header a:hover {
   font-weight: 400;
   font-size: 1.5rem;
   text-decoration: none;
+  color: #0017E9;
+}
+.containerMais article a:hover {
+  text-decoration: underline;
   color: #0017E9;
 }
 .containerMais img {

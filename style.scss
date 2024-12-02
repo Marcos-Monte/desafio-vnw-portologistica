@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Rolagem suave de movimentação dentro da pagina */
 }
 
 /* Limitador para resoluções muito altas */
@@ -162,6 +163,12 @@ header {
             font-weight: 400;
             font-size: 1.5rem;
             text-decoration: none;
+            color: $azul-2;
+        }
+
+        /* Hover */
+        a:hover{
+            text-decoration: underline;
             color: $azul-2;
         }
     }
