@@ -254,22 +254,32 @@ header a:hover {
 }
 .containerContatos article form {
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  /* hover */
 }
 .containerContatos article form .input {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
+  /* hover */
 }
 .containerContatos article form .input label {
   font-weight: 300;
   font-size: 1.25rem;
   text-transform: uppercase;
 }
-.containerContatos article form .input input {
+.containerContatos article form .input input, .containerContatos article form .input textarea {
   width: 80%;
   height: 3.1rem;
+  font-size: 1.3rem;
+  padding-left: 0.2rem;
+}
+.containerContatos article form .input textarea {
+  height: 7rem;
+}
+.containerContatos article form .input input:hover, .containerContatos article form .input textarea:hover {
+  background-color: #D8D8D8;
 }
 .containerContatos article form button {
   width: 80%;
@@ -281,6 +291,11 @@ header a:hover {
   font-size: 1.5rem;
   border: none;
   font-family: "Oswald";
+}
+.containerContatos article form button:hover {
+  background-color: #fff;
+  color: #0016DF;
+  border: solid #0016DF;
 }
 
 /* Footer */

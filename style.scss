@@ -303,7 +303,7 @@ header {
 
         form {
             width: 100%;
-            margin-top: 5rem;
+            margin-top: 2rem;
 
             .input{
                 width: 100%;
@@ -317,9 +317,20 @@ header {
                     text-transform: uppercase;
                 }
 
-                input{
+                input, textarea{
                     width: 80%;
                     height: 3.1rem;
+                    font-size: 1.3rem;
+                    padding-left: .2rem;
+                }
+
+                textarea{
+                    height: 7rem;
+                }
+
+                /* hover */
+                input:hover, textarea:hover {
+                    background-color: $cinza;
                 }
             }
 
@@ -334,6 +345,13 @@ header {
                     border: none;
                     font-family: "Oswald";
                     
+                }
+
+                /* hover */
+                button:hover{
+                    background-color: $branco;
+                    color: $azul-1;
+                    border: solid $azul-1
                 }
             }    
     }

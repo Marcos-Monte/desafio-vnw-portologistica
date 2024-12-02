@@ -94,8 +94,10 @@
         <section class="containerContatos limit">
 
             <article id="servicos">
+                
                 <h2>atendimento e comercial</h2>
                 <h3>entre em contato com a unidade:</h3>
+
                 <div class="containerImagens">
                     <figure>
                         <img src="./imagens/img_niteroi.png" alt="Imagem aérea do Porto de Niterói" />
@@ -121,24 +123,28 @@
             </article>
 
             <article id="contato">
+
                 <h2>fale conosco</h2>
                 <h3>se conecte com nossos colaboradores</h3>
+                
                 <form action="#">
+                    <!-- Todos os Inputs são 'obrigatórios'-->
                     <div class="input">
                         <label for="nome">nome</label>
-                        <input type="text">
+                        <input type="text" name="nome" placeholder="Nome Completo" required />
                     </div>
                     <div class="input">
                         <label for="email">email</label>
-                        <input type="email">
+                        <input type="email" name="email" placeholder="exemplo@email.com" required />
                     </div>
                     <div class="input">
                         <label for="telefone">telefone</label>
-                        <input type="number">
+                        <!-- Max e MinLength, definem a quantidade minima e máxima de caracteres que podem ser adicionados -->
+                        <input type="tel" name="telefone"placeholder="(xx) xxxxx-xxxx" maxlength="11" minlength="11" required />
                     </div>
                     <div class="input">
                         <label for="mensagem">mensagem</label>
-                        <input type="text-area">
+                        <textarea name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
                     </div>
 
                     <button>enviar</button>
