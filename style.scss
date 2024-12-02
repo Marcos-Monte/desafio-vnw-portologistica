@@ -206,7 +206,7 @@ header {
 
     article {
         width: 100%;
-        margin: 0 auto;
+        /* margin: 0 auto; */
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -277,7 +277,7 @@ header {
                     height: 20.24vh;
                 }
 
-                figcation{
+                figcaption{
                     font-weight: 500;
                     font-size: 1.25rem;
                     text-transform: uppercase;
@@ -358,7 +358,6 @@ header {
     }
 }
 
-
 /* Footer */
 footer{
     height: 8vh;
@@ -375,3 +374,200 @@ footer{
         color:#001C43;
     }
 }
+
+/* Media Queries */
+
+    /* Mobile */
+
+    @media (max-width: 500px){
+        header {
+            height: 100%;
+            flex-direction: column;
+
+            nav{
+                width: 100%;
+            }
+        }
+
+        .containerBackgroundImage{
+            article{
+                align-items: center;
+                text-align: center;
+
+                h1 {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+        .containerSobre {
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            article {
+                width: 90%;
+                
+                p {
+                    padding: 1rem 0;
+                    text-align: justify;
+                }
+            }
+
+            img{
+                width: 90%;
+                object-fit: contain;
+            }
+        }
+
+        .containerServicos {
+            padding: 1rem 0;
+
+            article {
+                gap: 2rem;
+            }
+        }
+
+        .containerContatos {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+
+            article {
+                width: 100%;
+
+                .containerImagens {
+                    flex-wrap: wrap;
+                    margin: 2rem 0;
+                    gap: 1.5rem;
+
+                    figure{
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+
+                form {
+
+                    .input {
+                        input, textarea {
+                            width: 100%;
+                        }
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }   
+
+    /* Tablet */
+
+    @media (min-width: 501px) and (max-width: 900px){
+        header {
+            height: 100%;
+            flex-direction: column;
+
+            nav{
+                width: 100%;
+            }
+        }
+
+        .containerBackgroundImage{
+            article{
+                /* align-items: center;
+                text-align: center; */
+
+                h1 {
+                    font-size: 4.5rem;
+                }
+            }
+        } 
+
+        .containerSobre {
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            article {
+                width: 90%;
+                
+                p {
+                    padding: 1rem 0;
+                    text-align: justify;
+                }
+            }
+
+            img{
+                width: 90%;
+                object-fit: contain;
+            }
+        }
+
+        .containerServicos {
+            padding: 1.5rem 0;
+
+            article {
+                gap:2rem;
+            }
+        }
+
+        .containerContatos {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+
+            article {
+                width: 100%;
+
+                .containerImagens {
+                    flex-wrap: wrap;
+                    margin: 2rem 0;
+                    gap: 1.5rem;
+
+                    figure{
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+
+                    /*     figcaption{
+                            font-size: 2rem;
+                        } */
+                    }
+                }
+
+                form {
+
+                    .input {
+                        input, textarea {
+                            width: 100%;
+                        }
+                    }
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        footer{
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }   
+
+
+

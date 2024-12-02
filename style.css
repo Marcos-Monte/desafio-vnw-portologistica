@@ -174,7 +174,7 @@ header a:hover {
 }
 .containerServicos article {
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -235,7 +235,7 @@ header a:hover {
   width: 14.32vw;
   height: 20.24vh;
 }
-.containerContatos article .containerImagens figure figcation {
+.containerContatos article .containerImagens figure figcaption {
   font-weight: 500;
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -312,4 +312,146 @@ footer p {
   font-weight: 700;
   font-size: 0.8rem;
   color: #001C43;
+}
+
+/* Media Queries */
+/* Mobile */
+@media (max-width: 500px) {
+  header {
+    height: 100%;
+    flex-direction: column;
+  }
+  header nav {
+    width: 100%;
+  }
+  .containerBackgroundImage article {
+    align-items: center;
+    text-align: center;
+  }
+  .containerBackgroundImage article h1 {
+    font-size: 3.5rem;
+  }
+  .containerSobre {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .containerSobre article {
+    width: 90%;
+  }
+  .containerSobre article p {
+    padding: 1rem 0;
+    text-align: justify;
+  }
+  .containerSobre img {
+    width: 90%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .containerServicos {
+    padding: 1rem 0;
+  }
+  .containerServicos article {
+    gap: 2rem;
+  }
+  .containerContatos {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  .containerContatos article {
+    width: 100%;
+  }
+  .containerContatos article .containerImagens {
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    gap: 1.5rem;
+  }
+  .containerContatos article .containerImagens figure {
+    width: 100%;
+  }
+  .containerContatos article .containerImagens figure img {
+    width: 100%;
+    height: auto;
+  }
+  .containerContatos article form .input input, .containerContatos article form .input textarea {
+    width: 100%;
+  }
+  .containerContatos article form button {
+    width: 100%;
+  }
+}
+/* Tablet */
+@media (min-width: 501px) and (max-width: 900px) {
+  header {
+    height: 100%;
+    flex-direction: column;
+  }
+  header nav {
+    width: 100%;
+  }
+  .containerBackgroundImage article {
+    /* align-items: center;
+    text-align: center; */
+  }
+  .containerBackgroundImage article h1 {
+    font-size: 4.5rem;
+  }
+  .containerSobre {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .containerSobre article {
+    width: 90%;
+  }
+  .containerSobre article p {
+    padding: 1rem 0;
+    text-align: justify;
+  }
+  .containerSobre img {
+    width: 90%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .containerServicos {
+    padding: 1.5rem 0;
+  }
+  .containerServicos article {
+    gap: 2rem;
+  }
+  .containerContatos {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  .containerContatos article {
+    width: 100%;
+  }
+  .containerContatos article .containerImagens {
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    gap: 1.5rem;
+  }
+  .containerContatos article .containerImagens figure {
+    width: 100%;
+    /*     figcaption{
+            font-size: 2rem;
+        } */
+  }
+  .containerContatos article .containerImagens figure img {
+    width: 100%;
+    height: auto;
+  }
+  .containerContatos article form .input input, .containerContatos article form .input textarea {
+    width: 100%;
+  }
+  .containerContatos article form button {
+    width: 100%;
+  }
+  footer p {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
