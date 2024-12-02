@@ -8,8 +8,9 @@
     box-sizing: border-box;
 }
 
+/* Limitador para resoluções muito altas */
 .limit {
-    max-width: 1400px;
+    max-width: 80rem;
     margin: 0 auto;
 }
 
@@ -51,10 +52,6 @@ header {
         list-style: none;
     }
 
-    li {
-
-    }
-
     a {
         text-decoration: none;
         font-size: 1.25rem;
@@ -62,6 +59,7 @@ header {
         color: $cinza-2;
     }
 
+    /* Hover */
     a:hover {
         color: $preto;
         font-size: 1.5rem;
@@ -117,12 +115,16 @@ header {
             font-family: "Oswald";
             margin: 1.5rem
         }
+
+        button:hover{
+            background-color: $branco;
+            color: $azul-1
+        }
     }
 }
 
 .containerMais {
     min-height: 100vh;
-    /* width: 100vw; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -165,18 +167,14 @@ header {
     }
 
     img {
-        max-width: 679px;
-        max-height: 783px;
+        width: 35.3vw;
+        height: 85.2vh;
     }
-    
-
-
 
 }
 
 .containerSobre {
     min-height: 100vh;
-    /* width: 100vw; */
     background-color: $cinza;
     display: flex;
     flex-direction: column;
@@ -210,7 +208,7 @@ header {
             height: 30rem;
             width: 23rem;
             background-color: $branco;
-            box-shadow: 0 4px 10px 0 $preto;
+            box-shadow: 0 0.25rem 0.625rem 0 $preto;
             
             img {
                 height: 50%;
@@ -253,7 +251,6 @@ header {
     
 
     article {
-        /* height: 100%; */
         width: 100%;
 
         .containerImagens {
@@ -266,11 +263,10 @@ header {
             figure {
                 display: flex;
                 flex-direction: column;
-                /* gap: 1rem; */
 
                 img {
-                    width: 275px;
-                    height: 186px;
+                    width: 14.32vw;
+                    height: 20.24vh;
                 }
 
                 figcation{
@@ -339,7 +335,6 @@ header {
 
 /* Footer */
 footer{
-    /* width: 100vw; */
     height: 8vh;
     display: flex;
     justify-content: center;
