@@ -102,6 +102,7 @@ header a:hover {
 .containerBackgroundImage article button:hover {
   background-color: #fff;
   color: #0016DF;
+  border: solid #0016DF;
 }
 
 .containerMais {
