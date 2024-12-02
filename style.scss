@@ -15,7 +15,7 @@
     margin: 0 auto;
 }
 
-/* Variaveis */
+/* Variaveis Sass*/
 $branco: #fff;
 $preto: #000;
 $azul-1: #0016DF;
@@ -125,7 +125,7 @@ header {
     }
 }
 
-.containerMais {
+.containerSobre {
     min-height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -181,7 +181,7 @@ header {
 
 }
 
-.containerSobre {
+.containerServicos {
     min-height: 100vh;
     background-color: $cinza;
     display: flex;
