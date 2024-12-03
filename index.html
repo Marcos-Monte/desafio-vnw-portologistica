@@ -61,7 +61,7 @@
 
             <h2>o que esperar do nosso sistema</h2>
 
-            <article class="limit">
+            <article class="containerCards limit">
 
                 <div class="card">
                     <img src="./imagens/img_box_1.png" alt="Operação portuária vista do alto">
@@ -91,12 +91,14 @@
 
         </section>
 
-        <section  id="contato" class="containerContatos limit">
+        <section id="contato" class="containerContatos limit">
 
             <article>
-                
-                <h2>atendimento e comercial</h2>
-                <h3>entre em contato com a unidade:</h3>
+
+                <div>
+                    <h2>atendimento e comercial</h2>
+                    <h3>entre em contato com a unidade:</h3>
+                </div>
 
                 <div class="containerImagens">
                     <figure>
@@ -124,9 +126,11 @@
 
             <article>
 
-                <h2>fale conosco</h2>
-                <h3>se conecte com nossos colaboradores</h3>
-                
+                <div>
+                    <h2>fale conosco</h2>
+                    <h3>se conecte com nossos colaboradores</h3>
+                </div>
+
                 <form action="#">
                     <!-- Todos os Inputs são 'obrigatórios'-->
                     <div class="input">
@@ -140,7 +144,8 @@
                     <div class="input">
                         <label for="telefone">telefone</label>
                         <!-- Max e MinLength, definem a quantidade minima e máxima de caracteres que podem ser adicionados -->
-                        <input type="tel" name="telefone"placeholder="(xx) xxxxx-xxxx" maxlength="11" minlength="11" required />
+                        <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" minlength="11"
+                            required />
                     </div>
                     <div class="input">
                         <label for="mensagem">mensagem</label>

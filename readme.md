@@ -53,3 +53,10 @@ O desafio consiste em desenvolver uma interface responsiva para o projeto "Porto
 <figure>  
     <img src="./imagens/layout.png" alt="Layout do site Porto Logística">  
 </figure> 
+
+## Resoluções
+
+- Mobile: até 500px
+- Tablet: 501px a 900px
+- Laptop: 901px a 1500px
+- Desktop: acima de 1501px

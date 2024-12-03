@@ -11,8 +11,13 @@
 
 /* Limitador para resoluções muito altas */
 .limit {
-  max-width: 80rem;
+  max-width: 1300px;
   margin: 0 auto;
+}
+
+/* Limitador para resoluções muito baixas */
+html {
+  min-width: 280px;
 }
 
 /* Variaveis Sass*/
@@ -22,7 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 15vh;
   font-family: "Oswald", sans-serif;
   /* Hover */
 }
@@ -59,7 +64,7 @@ header a:hover {
 
 /* Main */
 .containerBackgroundImage {
-  min-height: 100vh;
+  min-height: 85vh;
   background-image: url("./imagens/background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -115,7 +120,7 @@ header a:hover {
 }
 .containerSobre article {
   height: 100%;
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,16 +128,19 @@ header a:hover {
   /* Hover */
 }
 .containerSobre article h3 {
+  width: 70%;
   font-family: "Oswald";
   font-weight: 500;
   font-size: 1.5rem;
   color: #0017E9;
 }
 .containerSobre article h2 {
+  width: 70%;
   font-weight: 800;
   font-size: 2.25rem;
 }
 .containerSobre article p {
+  width: 70%;
   font-weight: 400;
   font-size: 1.5rem;
   margin: 1.5rem 0;
@@ -148,8 +156,10 @@ header a:hover {
   color: #0017E9;
 }
 .containerSobre img {
-  width: 35.3vw;
-  height: 85.2vh;
+  width: 35vw;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .containerServicos {
@@ -174,11 +184,10 @@ header a:hover {
 }
 .containerServicos article {
   width: 100%;
-  /* margin: 0 auto; */
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  gap: 2rem;
 }
 .containerServicos article .card {
   height: 30rem;
@@ -210,35 +219,15 @@ header a:hover {
 }
 
 .containerContatos {
-  min-height: 92vh;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  gap: 6rem;
   font-family: "Oswald";
 }
 .containerContatos article {
-  width: 100%;
-}
-.containerContatos article .containerImagens {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 4rem 0;
-  gap: 1.5rem;
-}
-.containerContatos article .containerImagens figure {
-  display: flex;
-  flex-direction: column;
-}
-.containerContatos article .containerImagens figure img {
-  width: 14.32vw;
-  height: 20.24vh;
-}
-.containerContatos article .containerImagens figure figcaption {
-  font-weight: 500;
-  font-size: 1.25rem;
-  text-transform: uppercase;
+  width: 45%;
 }
 .containerContatos article h2, .containerContatos article h3 {
   font-weight: 500;
@@ -253,8 +242,28 @@ header a:hover {
   font-size: 1.5rem;
   color: #000;
 }
-.containerContatos article form {
+.containerContatos article .containerImagens {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 4rem 0;
+}
+.containerContatos article .containerImagens figure {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.containerContatos article .containerImagens figure img {
   width: 100%;
+}
+.containerContatos article .containerImagens figure figcaption {
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.containerContatos article form {
+  width: 80%;
   margin-top: 2rem;
   /* hover */
 }
@@ -278,12 +287,13 @@ header a:hover {
 }
 .containerContatos article form .input textarea {
   height: 7rem;
+  padding-top: 0.5rem;
 }
 .containerContatos article form .input input:hover, .containerContatos article form .input textarea:hover {
   background-color: #D8D8D8;
 }
 .containerContatos article form button {
-  width: 80%;
+  width: 90%;
   height: 3.6rem;
   text-transform: uppercase;
   color: #fff;
@@ -314,66 +324,75 @@ footer p {
   color: #001C43;
 }
 
-/* Media Queries */
 /* Mobile */
 @media (max-width: 500px) {
   header {
-    height: 100%;
     flex-direction: column;
   }
   header nav {
     width: 100%;
   }
+  .containerBackgroundImage {
+    width: 100vw;
+  }
   .containerBackgroundImage article {
+    width: 100%;
+    flex-wrap: wrap;
     align-items: center;
-    text-align: center;
   }
   .containerBackgroundImage article h1 {
-    font-size: 3.5rem;
+    font-size: 2rem;
+  }
+  .containerBackgroundImage article p {
+    font-size: 1rem;
+  }
+  .containerBackgroundImage article button {
+    font-size: 1rem;
+    width: 8rem;
   }
   .containerSobre {
+    padding: 5rem 0;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 3rem;
   }
   .containerSobre article {
+    width: 100%;
+    align-items: center;
+  }
+  .containerSobre article h2, .containerSobre article h3, .containerSobre article p {
     width: 90%;
   }
   .containerSobre article p {
-    padding: 1rem 0;
     text-align: justify;
   }
   .containerSobre img {
-    width: 90%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .containerServicos {
-    padding: 1rem 0;
-  }
-  .containerServicos article {
-    gap: 2rem;
-  }
-  .containerContatos {
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-  }
-  .containerContatos article {
     width: 100%;
   }
+  .containerServicos {
+    padding: 3rem 0;
+  }
+  .containerContatos {
+    padding: 3rem 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerContatos article {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerContatos article h2, .containerContatos article h3 {
+    text-align: center;
+  }
   .containerContatos article .containerImagens {
-    flex-wrap: wrap;
-    margin: 2rem 0;
-    gap: 1.5rem;
+    flex-direction: column;
   }
   .containerContatos article .containerImagens figure {
     width: 100%;
   }
-  .containerContatos article .containerImagens figure img {
+  .containerContatos article form {
     width: 100%;
-    height: auto;
   }
   .containerContatos article form .input input, .containerContatos article form .input textarea {
     width: 100%;
@@ -385,65 +404,61 @@ footer p {
 /* Tablet */
 @media (min-width: 501px) and (max-width: 900px) {
   header {
-    height: 100%;
     flex-direction: column;
   }
   header nav {
     width: 100%;
   }
-  .containerBackgroundImage article {
-    /* align-items: center;
-    text-align: center; */
-  }
   .containerBackgroundImage article h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+  }
+  .containerBackgroundImage article p {
+    font-size: 1.5rem;
   }
   .containerSobre {
+    padding: 5rem 0;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 3rem;
   }
   .containerSobre article {
+    width: 100%;
+    align-items: center;
+  }
+  .containerSobre article h2, .containerSobre article h3, .containerSobre article p {
     width: 90%;
   }
   .containerSobre article p {
-    padding: 1rem 0;
     text-align: justify;
   }
   .containerSobre img {
-    width: 90%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    width: 30rem;
   }
   .containerServicos {
-    padding: 1.5rem 0;
-  }
-  .containerServicos article {
-    gap: 2rem;
+    padding: 3rem 0;
   }
   .containerContatos {
-    width: 90%;
+    padding: 3rem 0;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
   }
   .containerContatos article {
-    width: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerContatos article h2, .containerContatos article h3 {
+    text-align: center;
   }
   .containerContatos article .containerImagens {
-    flex-wrap: wrap;
-    margin: 2rem 0;
-    gap: 1.5rem;
+    flex-direction: column;
   }
   .containerContatos article .containerImagens figure {
     width: 100%;
-    /*     figcaption{
-            font-size: 2rem;
-        } */
   }
-  .containerContatos article .containerImagens figure img {
+  .containerContatos article form {
     width: 100%;
-    height: auto;
   }
   .containerContatos article form .input input, .containerContatos article form .input textarea {
     width: 100%;
@@ -451,7 +466,29 @@ footer p {
   .containerContatos article form button {
     width: 100%;
   }
-  footer p {
-    font-size: 1.2rem;
+}
+/* Notebook */
+@media (min-width: 901px) and (max-width: 1500px) {
+  .containerSobre {
+    padding: 5rem 0;
+    flex-direction: column;
+    gap: 3rem;
   }
-}/*# sourceMappingURL=style.css.map */
+  .containerSobre article {
+    width: 100%;
+    align-items: center;
+  }
+  .containerSobre article h2, .containerSobre article h3, .containerSobre article p {
+    width: 90%;
+  }
+  .containerSobre article p {
+    text-align: justify;
+  }
+  .containerSobre img {
+    width: 30rem;
+  }
+  .containerServicos {
+    padding: 3rem 0;
+  }
+}
+/* Desktop *//*# sourceMappingURL=style.css.map */
