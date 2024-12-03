@@ -115,7 +115,6 @@ header a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
   font-family: "Roboto";
 }
 .containerSobre article {
