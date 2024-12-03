@@ -135,21 +135,21 @@
                     <!-- Todos os Inputs são 'obrigatórios'-->
                     <div class="input">
                         <label for="nome">nome</label>
-                        <input type="text" name="nome" placeholder="Nome Completo" required />
+                        <input type="text" name="nome" id="nome" placeholder="Nome Completo" required />
                     </div>
                     <div class="input">
                         <label for="email">email</label>
-                        <input type="email" name="email" placeholder="exemplo@email.com" required />
+                        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required />
                     </div>
                     <div class="input">
                         <label for="telefone">telefone</label>
                         <!-- Max e MinLength, definem a quantidade minima e máxima de caracteres que podem ser adicionados -->
-                        <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" minlength="11"
+                        <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" minlength="11"
                             required />
                     </div>
                     <div class="input">
                         <label for="mensagem">mensagem</label>
-                        <textarea name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                        <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
                     </div>
 
                     <button>enviar</button>
