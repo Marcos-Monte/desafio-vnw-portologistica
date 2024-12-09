@@ -23,23 +23,26 @@ html {
 /* Variaveis Sass*/
 /* Header */
 header {
+  height: 15vh;
   background-color: #fff;
+  font-family: "Oswald", sans-serif;
+}
+header section {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
-  font-family: "Oswald", sans-serif;
   /* Hover */
 }
-header h2 {
+header section h2 {
   font-weight: 700;
   font-size: 2.5rem;
 }
-header nav {
+header section nav {
   width: 50%;
   height: 100%;
 }
-header ul {
+header section ul {
   width: 100%;
   height: 100%;
   display: flex;
@@ -47,13 +50,13 @@ header ul {
   align-items: center;
   list-style: none;
 }
-header a {
+header section a {
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 500;
   color: #5B5B5B;
 }
-header a:hover {
+header section a:hover {
   color: #000;
   font-size: 1.5rem;
   font-weight: 900;
@@ -181,37 +184,37 @@ header a:hover {
 .containerServicos h2 {
   color: #000;
 }
-.containerServicos article {
+.containerServicos .containerCards {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.containerServicos article .card {
+.containerServicos .containerCards .card {
   height: 30rem;
   width: 23rem;
   background-color: #fff;
   box-shadow: 0 0.25rem 0.625rem 0 #000;
 }
-.containerServicos article .card img {
+.containerServicos .containerCards .card img {
   height: 50%;
   width: 100%;
 }
-.containerServicos article .card div {
+.containerServicos .containerCards .card div {
   height: 50%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
-.containerServicos article .card div span {
+.containerServicos .containerCards .card div span {
   font-weight: 500;
   font-size: 1.5rem;
 }
-.containerServicos article .card div p {
+.containerServicos .containerCards .card div p {
   font-weight: 200;
   font-size: 1.5rem;
   text-align: left;
@@ -219,73 +222,77 @@ header a:hover {
 
 .containerContatos {
   min-height: 92vh;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: start;
   font-family: "Oswald";
   padding: 2rem 0;
 }
-.containerContatos article {
+.containerContatos section {
   width: 45%;
 }
-.containerContatos article h2, .containerContatos article h3 {
+.containerContatos section h2, .containerContatos section h3 {
   font-weight: 500;
   text-transform: uppercase;
 }
-.containerContatos article h2 {
+.containerContatos section h2 {
   font-size: 2rem;
   color: #0017E9;
   margin-bottom: 1rem;
 }
-.containerContatos article h3 {
+.containerContatos section h3 {
   font-size: 1.5rem;
   color: #000;
   padding-bottom: 2rem;
 }
-.containerContatos article .containerImagens {
+.containerContatos section .containerImagens {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.containerContatos article .containerImagens figure {
-  flex: 1;
+.containerContatos section .containerImagens figure {
   height: 30vh;
 }
-.containerContatos article .containerImagens figure figcaption {
+.containerContatos section .containerImagens figure img {
+  width: 100%;
+}
+.containerContatos section .containerImagens figure figcaption {
   font-weight: 500;
   font-size: 1.25rem;
   text-transform: uppercase;
 }
-.containerContatos article form {
+.containerContatos section form {
   flex: 1;
   /* hover */
 }
-.containerContatos article form .input {
+.containerContatos section form .input {
   width: 60%;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
   /* hover */
 }
-.containerContatos article form .input label {
+.containerContatos section form .input label {
   font-weight: 300;
   font-size: 1.25rem;
   text-transform: uppercase;
 }
-.containerContatos article form .input input, .containerContatos article form .input textarea {
+.containerContatos section form .input input, .containerContatos section form .input textarea {
   width: 100%;
   height: 3.1rem;
   font-size: 1.3rem;
   padding-left: 0.2rem;
 }
-.containerContatos article form .input textarea {
+.containerContatos section form .input textarea {
   height: 7rem;
   padding-top: 0.5rem;
 }
-.containerContatos article form .input input:hover, .containerContatos article form .input textarea:hover {
+.containerContatos section form .input input:hover, .containerContatos section form .input textarea:hover {
   background-color: #D8D8D8;
 }
-.containerContatos article form button {
+.containerContatos section form button {
   width: 60%;
   height: 3.6rem;
   text-transform: uppercase;
@@ -296,7 +303,7 @@ header a:hover {
   border: none;
   font-family: "Oswald";
 }
-.containerContatos article form button:hover {
+.containerContatos section form button:hover {
   background-color: #fff;
   color: #0016DF;
   border: solid #0016DF;
@@ -321,16 +328,19 @@ footer p {
 /* Mobile */
 @media (max-width: 500px) {
   header {
+    height: auto;
+  }
+  header section {
     flex-direction: column;
     height: auto;
   }
-  header h2 {
+  header section h2 {
     display: none;
   }
-  header nav {
+  header section nav {
     width: 100%;
   }
-  header nav ul {
+  header section nav ul {
     flex-direction: column;
   }
   .containerBackgroundImage {
@@ -382,33 +392,45 @@ footer p {
   .containerServicos {
     padding: 3rem 0;
   }
+  .containerServicos .containerCards .card {
+    width: 90%;
+  }
+  .containerServicos .containerCards .card div p {
+    font-size: 1.2rem;
+  }
   .containerContatos {
     padding: 3rem 0;
     flex-direction: column;
     align-items: center;
   }
-  .containerContatos article {
+  .containerContatos section {
     width: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 1rem 0;
   }
-  .containerContatos article h2, .containerContatos article h3 {
+  .containerContatos section h2, .containerContatos section h3 {
     text-align: center;
   }
-  .containerContatos article .containerImagens {
+  .containerContatos section h2 {
+    font-size: 1.25rem;
+  }
+  .containerContatos section h3 {
+    font-size: 1rem;
+  }
+  .containerContatos section .containerImagens {
     flex-direction: column;
+    align-items: center;
   }
-  .containerContatos article .containerImagens figure {
+  .containerContatos section form {
     width: 100%;
   }
-  .containerContatos article form {
-    width: 90%;
-  }
-  .containerContatos article form .input {
+  .containerContatos section form .input {
     width: 100%;
   }
-  .containerContatos article form button {
+  .containerContatos section form button {
     width: 100%;
   }
   footer {
@@ -417,10 +439,10 @@ footer p {
 }
 /* Tablet */
 @media (min-width: 501px) and (max-width: 900px) {
-  header {
+  header section {
     flex-direction: column;
   }
-  header nav {
+  header section nav {
     width: 100%;
   }
   .containerBackgroundImage article h1 {
@@ -455,7 +477,7 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
-  .containerContatos article {
+  .containerContatos section {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -463,22 +485,20 @@ footer p {
     align-items: center;
     padding: 1rem 0;
   }
-  .containerContatos article h2, .containerContatos article h3 {
+  .containerContatos section h2, .containerContatos section h3 {
     text-align: center;
   }
-  .containerContatos article .containerImagens {
+  .containerContatos section .containerImagens {
     flex-direction: column;
+    align-items: center;
   }
-  .containerContatos article .containerImagens figure {
+  .containerContatos section form {
     width: 100%;
   }
-  .containerContatos article form {
+  .containerContatos section form .input {
     width: 100%;
   }
-  .containerContatos article form .input {
-    width: 100%;
-  }
-  .containerContatos article form button {
+  .containerContatos section form button {
     width: 100%;
   }
 }
