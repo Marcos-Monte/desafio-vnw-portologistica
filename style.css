@@ -11,7 +11,7 @@
 
 /* Limitador para resoluções muito altas */
 .limit {
-  max-width: 1300px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -37,15 +37,14 @@ header h2 {
 }
 header nav {
   width: 50%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  height: 100%;
 }
 header ul {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   list-style: none;
 }
 header a {
@@ -65,6 +64,7 @@ header a:hover {
 /* Main */
 .containerBackgroundImage {
   min-height: 85vh;
+  min-width: 280px;
   background-image: url("./imagens/background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -218,12 +218,12 @@ header a:hover {
 }
 
 .containerContatos {
-  min-height: 100vh;
-  width: 100%;
+  min-height: 92vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
   font-family: "Oswald";
+  padding: 2rem 0;
 }
 .containerContatos article {
   width: 45%;
@@ -240,21 +240,16 @@ header a:hover {
 .containerContatos article h3 {
   font-size: 1.5rem;
   color: #000;
+  padding-bottom: 2rem;
 }
 .containerContatos article .containerImagens {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin: 4rem 0;
 }
 .containerContatos article .containerImagens figure {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-}
-.containerContatos article .containerImagens figure img {
-  width: 100%;
+  flex: 1;
+  height: 30vh;
 }
 .containerContatos article .containerImagens figure figcaption {
   font-weight: 500;
@@ -262,12 +257,11 @@ header a:hover {
   text-transform: uppercase;
 }
 .containerContatos article form {
-  width: 80%;
-  margin-top: 2rem;
+  flex: 1;
   /* hover */
 }
 .containerContatos article form .input {
-  width: 100%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
@@ -279,7 +273,7 @@ header a:hover {
   text-transform: uppercase;
 }
 .containerContatos article form .input input, .containerContatos article form .input textarea {
-  width: 80%;
+  width: 100%;
   height: 3.1rem;
   font-size: 1.3rem;
   padding-left: 0.2rem;
@@ -292,7 +286,7 @@ header a:hover {
   background-color: #D8D8D8;
 }
 .containerContatos article form button {
-  width: 80%;
+  width: 60%;
   height: 3.6rem;
   text-transform: uppercase;
   color: #fff;
@@ -323,16 +317,25 @@ footer p {
   color: #001C43;
 }
 
+/* Medias */
 /* Mobile */
 @media (max-width: 500px) {
   header {
     flex-direction: column;
+    height: auto;
+  }
+  header h2 {
+    display: none;
   }
   header nav {
     width: 100%;
   }
+  header nav ul {
+    flex-direction: column;
+  }
   .containerBackgroundImage {
     width: 100vw;
+    min-height: 40vh;
   }
   .containerBackgroundImage article {
     width: 100%;
@@ -340,14 +343,14 @@ footer p {
     align-items: center;
   }
   .containerBackgroundImage article h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   .containerBackgroundImage article p {
     font-size: 1rem;
   }
   .containerBackgroundImage article button {
     font-size: 1rem;
-    width: 8rem;
+    width: 30%;
   }
   .containerSobre {
     padding: 5rem 0;
@@ -358,6 +361,15 @@ footer p {
     width: 100%;
     align-items: center;
   }
+  .containerSobre article h3 {
+    font-size: 1rem;
+  }
+  .containerSobre article h2 {
+    font-size: 1.5rem;
+  }
+  .containerSobre article p {
+    font-size: 0.9rem;
+  }
   .containerSobre article h2, .containerSobre article h3, .containerSobre article p {
     width: 90%;
   }
@@ -365,7 +377,7 @@ footer p {
     text-align: justify;
   }
   .containerSobre img {
-    width: 100%;
+    width: 80%;
   }
   .containerServicos {
     padding: 3rem 0;
@@ -391,13 +403,16 @@ footer p {
     width: 100%;
   }
   .containerContatos article form {
-    width: 100%;
+    width: 90%;
   }
-  .containerContatos article form .input input, .containerContatos article form .input textarea {
+  .containerContatos article form .input {
     width: 100%;
   }
   .containerContatos article form button {
     width: 100%;
+  }
+  footer {
+    text-align: center;
   }
 }
 /* Tablet */
@@ -446,6 +461,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
   }
   .containerContatos article h2, .containerContatos article h3 {
     text-align: center;
@@ -459,7 +475,7 @@ footer p {
   .containerContatos article form {
     width: 100%;
   }
-  .containerContatos article form .input input, .containerContatos article form .input textarea {
+  .containerContatos article form .input {
     width: 100%;
   }
   .containerContatos article form button {
@@ -489,5 +505,4 @@ footer p {
   .containerServicos {
     padding: 3rem 0;
   }
-}
-/* Desktop *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
